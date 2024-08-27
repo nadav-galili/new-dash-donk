@@ -16,7 +16,7 @@ const Account: React.FC = () => {
       const email = result.user.email; // Get the email from the user
 
       // Send the ID token and email to your server
-      const response = await httpClient.post("/api/google", {
+      const response = await httpClient.post("/api/users/dashGoogle", {
         idToken: token,
         email: email,
       });
