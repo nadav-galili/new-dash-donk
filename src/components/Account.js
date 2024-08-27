@@ -26,6 +26,7 @@ const Account = () => {
                 console.log("User authenticated successfully");
                 //save the user.token in the local storage
                 localStorage.setItem("xToken", response.data.user.token);
+                console.log("User token saved in local storage");
                 // Redirect to the dashboard or another page
                 navigate("/account_settings", { state: { user: response.data.user } });
             }
