@@ -3,15 +3,14 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA4VG1ZI4rIQX8tngEhB4jaFqTXgPjnb9c",
-  authDomain: "pokerdonkey-2ba74.firebaseapp.com",
-  projectId: "pokerdonkey-2ba74",
-  storageBucket: "pokerdonkey-2ba74.appspot.com",
-  messagingSenderId: "959357331447",
-  appId: "1:959357331447:web:b43b7c1f82149c8f9ab0f2",
-  measurementId: "G-JNNLF89KPJ",
+  apiKey: "AIzaSyBm9V5y5bO9IqNQ876qo9TlnTf6dRXV1Fo",
+  authDomain: "poker-vite.firebaseapp.com",
+  projectId: "poker-vite",
+  storageBucket: "poker-vite.appspot.com",
+  messagingSenderId: "483497893618",
+  appId: "1:483497893618:web:7012ff1db06d18f67d3a6b",
+  measurementId: "G-SR18FFKVEM",
 };
-
 console.log("Firebase Config:", firebaseConfig);
 
 const app = initializeApp(firebaseConfig);
