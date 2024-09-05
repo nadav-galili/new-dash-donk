@@ -41,8 +41,6 @@ const App: React.FC = () => {
         <Route path="/terms_and_conditions" element={<TermsAndConditions />} />
         <Route path="/account" element={<Account />} />
         <Route path="/account_settings" element={<AccountSettings />} />
-        {/* Add this route */}
-        {/* Non-protected route */}
         <Route path="/" element={<Navigate to="/account" />} />
       </Routes>
     </Router>
