@@ -13,6 +13,8 @@ import Login from "./components/Login";
 import LeagueDashboard from "./components/LeagueDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AccountSettings from "./components/AccountSettings";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsAndConditions from "./components/TermsAndConditions";
 
 const App: React.FC = () => {
   return (
@@ -35,8 +37,10 @@ const App: React.FC = () => {
             </ProtectedRoute>
           }
         />
-        <Route path="/account" element={<Account />} />{" "}
-        <Route path="/account_settings" element={<AccountSettings />} />{" "}
+        <Route path="/privacy_policy" element={<PrivacyPolicy />} />
+        <Route path="/terms_and_conditions" element={<TermsAndConditions />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/account_settings" element={<AccountSettings />} />
         {/* Add this route */}
         {/* Non-protected route */}
         <Route path="/" element={<Navigate to="/account" />} />
