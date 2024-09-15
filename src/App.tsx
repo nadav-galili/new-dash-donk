@@ -15,6 +15,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import AccountSettings from "./components/AccountSettings";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsAndConditions from "./components/TermsAndConditions";
+import Users from "./components/Users";
 
 const App: React.FC = () => {
   return (
@@ -34,6 +35,14 @@ const App: React.FC = () => {
           element={
             <ProtectedRoute>
               <LeagueDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/users"
+          element={
+            <ProtectedRoute>
+              <Users />
             </ProtectedRoute>
           }
         />
