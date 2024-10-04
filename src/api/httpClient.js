@@ -1,9 +1,10 @@
 // src/api/httpClient.ts
 import axios from "axios";
-// const workIp = "192.168.1.12";
+// const workIp = "192.168.1.124";
+// const homeIp = "10.0.0.2";
 const httpClient = axios.create({
     baseURL: `https://backend-donk-ae6a3b674658.herokuapp.com/`, // Replace with your actual API base URL
-    // baseURL: `http://${workIp}:3030/`,
+    //baseURL: `http://${workIp}:3030/`,
     timeout: 10000, // You can adjust this timeout based on your needs
     headers: {
         "Content-Type": "application/json",
