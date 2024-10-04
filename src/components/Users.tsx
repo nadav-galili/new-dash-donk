@@ -13,10 +13,8 @@ interface User {
   last_login: string;
 }
 
-type Users = User[];
-
 const Users: React.FC = () => {
-  const [users, setUsers] = useState<Users>([]);
+  const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -27,7 +25,7 @@ const Users: React.FC = () => {
         });
 
         console.log("ssdsd", data);
-        setUsers(data as Users);
+        setUsers(data as User[]);
       } catch (error) {
         console.error("Failed to fetch users:", error);
       }
@@ -44,12 +42,12 @@ const Users: React.FC = () => {
       <h4 className="text-1xl text-center font-semibold text-sky-500">
         Users Count:{users.length}
       </h4>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-10 gap-4 flex-1 h-full">
         {users.map((user) => (
           <div key={user.id} className="bg-white shadow-md rounded-md p-4">
             <img
               src={
-                user.image.startsWith("https")
+                user.image.startsWith("http")
                   ? user.image
                   : `https://backend-donk-images.s3.il-central-1.amazonaws.com/${user.image}`
               }
@@ -65,10 +63,10 @@ const Users: React.FC = () => {
               }`}>
               {user.is_active ? "Active" : "Inactive"}
             </p>
-            <p className="text-center text-sm text-gray-500">
+            <p className="text-center text-xs text-gray-500">
               Registered: {dayjs(user.created_at).format("DD/MM/YYYY")}
             </p>
-            <p className="text-center text-sm text-gray-500">
+            <p className="text-center text-xs text-gray-500">
               Last Login:{dayjs(user.last_login).format("DD/MM/YYYY HH:mm")}
             </p>
             <p className="text-center text-sm text-gray-500">
